@@ -13,6 +13,7 @@ import {
   Options,
   StyledLink,
   Btn,
+  GenreName,
 } from './MovieDetails.styled';
 
 const imgUrl = 'https://image.tmdb.org/t/p/';
@@ -60,7 +61,7 @@ export default function MovieDetails() {
             {genres && (
               <Text>
                 {genres.map((genre, index) => {
-                  return <span key={index}>{genre.name + ' '}</span>;
+                  return <GenreName key={index}>{genre.name}</GenreName>;
                 })}
               </Text>
             )}

@@ -12,8 +12,8 @@ import { Link } from 'react-router-dom';
 
 export default function MoviesSearcher() {
   const [query, setQuery] = useState('');
-  const [movies, setMovies] = useState();
-  const [error, setError] = useState();
+  const [movies, setMovies] = useState(null);
+  const [error, setError] = useState('');
   const [searchParams, setSearchParams] = useSearchParams();
   const movieName = searchParams.get('movie');
 
@@ -50,9 +50,7 @@ export default function MoviesSearcher() {
           {movies.data.results.map(({ id, title, name }) => {
             return (
               <Movie key={id}>
-                <Link to={`/goit-react-hw-05-movies/movies/${id}`}>
-                  {title || name}
-                </Link>
+                <Link to={`/movies/${id}`}>{title || name}</Link>
               </Movie>
             );
           })}

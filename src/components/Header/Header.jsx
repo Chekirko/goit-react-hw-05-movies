@@ -5,10 +5,10 @@ export const Header = () => {
     <>
       <StyledHeader>
         <Nav>
-          <StyledLink to="/goit-react-hw-05-movies" end>
+          <StyledLink to="/" end>
             Home
           </StyledLink>
-          <StyledLink to="/goit-react-hw-05-movies/movies">Movies</StyledLink>
+          <StyledLink to="/movies">Movies</StyledLink>
         </Nav>
       </StyledHeader>
     </>

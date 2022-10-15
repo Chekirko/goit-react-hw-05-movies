@@ -13,15 +13,9 @@ export const Layout = () => {
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <Routes>
-        <Route path="goit-react-hw-05-movies" element={<Home />} />
-        <Route
-          path="goit-react-hw-05-movies/movies"
-          element={<MoviesSearcher />}
-        />
-        <Route
-          path="goit-react-hw-05-movies/movies/:movieId"
-          element={<MovieDetails />}
-        >
+        <Route path="/" element={<Home />} />
+        <Route path="/movies" element={<MoviesSearcher />} />
+        <Route path="/movies/:movieId" element={<MovieDetails />}>
           <Route path="cast" element={<CastContent />} />
           <Route path="review" element={<ReviewContent />} />
         </Route>

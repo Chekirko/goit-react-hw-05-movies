@@ -53,3 +53,9 @@ export const StyledLink = styled(NavLink)`
     margin-bottom: 5px;
   }
 `;
+
+export const GenreName = styled.span`
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+`;

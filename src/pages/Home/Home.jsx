@@ -19,9 +19,7 @@ export default function Home() {
         {movies.map(({ title, id, name }) => {
           return (
             <Movie key={id}>
-              <Link to={`/goit-react-hw-05-movies/movies/${id}`}>
-                {title || name}
-              </Link>
+              <Link to={`/movies/${id}`}>{title || name}</Link>
             </Movie>
           );
         })}
